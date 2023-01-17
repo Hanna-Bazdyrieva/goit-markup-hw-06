@@ -465,12 +465,11 @@
             autocomplete="on"
           >
             <label>
-            <input
-              class="subscribe-field"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="E-mail"
+              <input
+                class="subscribe-field"
+                type="email"
+                name="email"
+                placeholder="E-mail"
             /></label>
             <button class="subscribe-button form-btn" type="submit">
               Підписатися
@@ -483,7 +482,7 @@
       </div>
     </footer>
 
-    <!-- -----MODAL----- -->
+    <!--MODAL-->
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -493,11 +492,15 @@
           </svg>
         </button>
         <h2 class="order-title">Залиште свої дані, ми вам передзвонимо</h2>
-        <form class="order-form js-speaker-form" name="order-form" autocomplete="on">
+        <form
+          class="order-form js-speaker-form"
+          name="order-form"
+          autocomplete="on"
+        >
           <div class="order-form-container">
             <div class="order-field-wrap">
               <label class="order-label" for="name">Ім'я</label>
-              <input class="order-field" type="text" id="name" name="name"/>
+              <input class="order-field" type="text" id="name" name="name" />
               <span class="icon-wrap">
                 <svg class="order-icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-person"></use>
@@ -506,14 +509,19 @@
             </div>
             <div class="order-field-wrap">
               <label class="order-label" for="telephone">Телефон</label>
-              <input class="order-field" type="tel" id="telephone" name="telephone" />
+              <input
+                class="order-field"
+                type="tel"
+                id="telephone"
+                name="telephone"
+              />
               <div class="icon-wrap">
                 <svg class="order-icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-telephone"></use>
                 </svg>
               </div>
             </div>
-            <div  class="order-field-wrap">
+            <div class="order-field-wrap">
               <label class="order-label" for="email">Пошта</label>
               <input class="order-field" type="email" id="email" name="email"/>
               <div class="icon-wrap">
@@ -530,21 +538,34 @@
               rows="5"
               placeholder="Введіть текст"
             ></textarea>
-            <div class="order-agreed-container">
-               <label class="order-agreement" for="agreement">
-                <input id="agreement" type="checkbox" name="agreement" value="agreed" />
-                Погоджуюся з розсилкою та приймаю Умови договору
-                </label>
-            </div>
           </div>
-          <button class="order-button form-btn" type="submit">Відправити</button>
+          <label class="checkbox-label" for="agreement">
+            <input
+              class="checkbox-field visually-hidden"
+              id="agreement"
+              type="checkbox"
+              name="agreement"
+              value="agreed"
+            />
+            <span class="checkbox-box">
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            Погоджуюся з розсилкою та приймаю
+            <a class="link agreement-link" href=""> Умови договору</a>
+          </label>
+
+          <button class="order-button form-btn" type="submit">
+            Відправити
+          </button>
         </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
 
-    <script>
+    <!-- <script>
       (() => {
         document
           .querySelector(".js-speaker-form")
@@ -556,6 +577,6 @@
             );
           });
       })();
-    </script>
+    </script> -->
   </body>
 </html>
