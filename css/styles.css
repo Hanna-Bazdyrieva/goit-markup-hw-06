@@ -103,8 +103,8 @@ header {
 }
 /* LOGO */
 .logo-link {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -113,9 +113,12 @@ header {
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
-  transition: color var(--transition);
+  /* transition: color var(--transition); */
 }
-.logo-link {
+.header-logo-link {
+  display: flex;
+  align-items: center;
+
   color: var(--accent-color);
   transition: color var(--transition);
 }
@@ -511,8 +514,7 @@ header .studio {
   width: 231px;
 }
 
-.footer .logo-link {
-  height: 31px;
+.footer-logo-link {
   margin-bottom: 20px;
 }
 
@@ -533,10 +535,6 @@ header .studio {
 }
 
 .join {
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  width: 206px;
   margin-top: 12px;
   margin-left: 70px;
 }
@@ -557,14 +555,13 @@ header .studio {
 
 .join-list {
   display: flex;
-
-  width: 206px;
-  height: 44px;
   gap: 10px;
 }
 
 .join-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 44px;
   height: 44px;
@@ -583,14 +580,10 @@ header .studio {
 }
 
 .join-link-icon {
-  margin: 12px;
   fill: currentColor;
 }
 .subscribe {
-  display: flex;
-  flex-direction: column;
-  width: 570px;
-  height: 86px;
+ 
   margin-left: 93px;
   margin-top: 12px;
 }
@@ -730,7 +723,7 @@ header .studio {
 }
 .project-link:hover,
 .project-link:focus {
-  /* border: 1px solid var(--portfolio-projects-border-color); */
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -869,6 +862,7 @@ header .studio {
   background-color: inherit;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: color var(--transition);
 }
 
 .close-icon {
@@ -885,10 +879,10 @@ header .studio {
 
 .order-title {
   display: block;
-  width: 448px;
   margin-bottom: 12px;
 
   font-size: 20px;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: 0.03em;
 
@@ -978,6 +972,7 @@ padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  resize: none;
 
   transition: border var(--transition);
 }
@@ -993,8 +988,9 @@ padding-left: 42px;
 
 .checkbox-label {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 12px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
